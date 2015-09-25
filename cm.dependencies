@@ -20,7 +20,7 @@
     },
     {
         "repository": "android_frameworks_native",
-        "target_path": "frameworks/av"
+        "target_path": "frameworks/native"
 	"revision": "optimized"
     }
 ]
