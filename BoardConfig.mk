@@ -19,9 +19,7 @@
 
 -include device/samsung/galaxys2-common/BoardCommonConfig.mk
 
-#Use old kernel toolchain. Newer GCC may be the root cause of our modem
-#interface dying sometimes.
-
+# Use old kernel toolchain. 
 # TARGET_KERNEL_CUSTOM_TOOLCHAIN := arm-eabi-4.4.3
 
 TARGET_BOARD_INFO_FILE := device/samsung/n7000/board-info.txt
@@ -41,6 +39,10 @@ TARGET_OTA_ASSERT_DEVICE := galaxynote,n7000,N7000,GT-N7000
 
 # We have a high res screen, use big font in recovery
 BOARD_USE_CUSTOM_RECOVERY_FONT := \"roboto_15x24.h\"
+DEVICE_RESOLUTION := 800x1280
+RECOVERY_GRAPHICS_USE_LINELENGTH := true
+TW_HAS_NO_RECOVERY_PARTITION := true
+
 
 # Use the non-open-source parts, if they're present
 -include vendor/samsung/n7000/BoardConfigVendor.mk
